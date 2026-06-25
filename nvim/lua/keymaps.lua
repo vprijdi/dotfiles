@@ -1,6 +1,7 @@
 local opts = { noremap = true, silent = true }
 
-vim.g.mapleader = "."
+vim.g.mapleader = ","
+vim.keymap.set("n", "<space><space>", ":")
 -- vim.g.maplocalleader = " "
 
 -- Move lines up and down
@@ -22,21 +23,12 @@ vim.keymap.set("x", "<leader>p", [["_dP]], {desc = "p before cursor w/o yanking"
 vim.keymap.set("v", "p", '"_dp', opts, {desc = "p after cursor w/o yanking"})
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], {desc = "d w/o yanking"})
 
-vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search hl", silent = true })
-
-
--- format without prettier using the built in
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
+vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "clear search hl", silent = true })
 vim.keymap.set("n", "x", '"_x', opts, { desc = "x without yanking" })
-
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "Replace word cursor is on globally" })
-
 
 --vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "makes file executable" })
 
--- Highlight yanked text
+-- highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking text",
     group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
@@ -44,7 +36,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.hl.on_yank()
     end,
 })
-
 
 -- tab stuff
 vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")   --open new tab
