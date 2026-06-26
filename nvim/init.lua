@@ -7,10 +7,18 @@ require("mini")
 require("treesitter")
 require("lsp")
 
+-- colorscheme stuff
+vim.cmd("colorscheme base2tone_suburb_dark")
 
-vim.cmd("colorscheme oxocarbon")
--- vim.api.nvim_create_autocmd("VimEnter", {
--- 	callback = function()
--- 		vim.cmd("ShowkeysToggle")
--- 	end,
--- })
+for _, group in ipairs({
+    "Normal",
+    "NormalFloat",
+    "NormalNC",
+    "SignColumn",
+    "LineNr",
+    "NonText",
+    "StatusLine",
+    "Pmenu",
+}) do
+    vim.api.nvim_set_hl(0, group, { bg = "none", fg = "#afb8f1" })
+end
