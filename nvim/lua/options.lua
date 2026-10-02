@@ -13,14 +13,14 @@ vim.opt.autoindent = true                           -- Copy indent from current 
 vim.opt.smartindent = true
 
 -- Search settings
-vim.opt.ignorecase = true                          
+vim.opt.ignorecase = true
 vim.opt.smartcase = true                           -- Case sensitive if uppercase in search
 vim.opt.incsearch = true                           -- Show matches as you type
 
 -- File handling
 vim.opt.swapfile = false
-vim.opt.backup = false 
-vim.opt.writebackup = false 
+vim.opt.backup = false
+vim.opt.writebackup = false
 vim.opt.undofile = true
 vim.opt.updatetime = 100
 vim.opt.autoread = true                            -- Auto reload files changed outside vim
@@ -37,12 +37,11 @@ vim.opt.sidescrolloff = 8
 
 -- Behavior settings
 vim.opt.backspace = {"start", "eol", "indent"}     -- Basically normal backspace
-vim.opt.errorbells = false                         
+vim.opt.errorbells = false
 vim.opt.clipboard:append("unnamedplus")
-vim.opt.iskeyword:append("-")                      -- Treat dash as part of word
-vim.opt.inccommand = "split"
+vim.opt.iskeyword:append("-")                      -- Treat dash as part of word vim.opt.inccommand = "split"
 vim.opt.mouse = "a"
-vim.opt.foldenable = false
+-- vim.opt.foldenable = false
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true

@@ -27,7 +27,7 @@ require("mini.extra").setup()
 
 vim.keymap.set("n", "<leader>pf", function() MiniPick.builtin.files() end, { desc = "mini file picker" })
 vim.keymap.set("n", "<leader>pw", function() MiniPick.builtin.grep_live() end, { desc = "mini pick live search" })
-vim.keymap.set("n", "<leader>xx", function() MiniExtra.pickers.diagnostic() end, { desc = "mini pick diagnostics" })
+vim.keymap.set("n", "<leader>xx", function() MiniExtra.pickers.diagnostic() end, { desc = "ini pick diagnostics" })
 
 vim.keymap.set("n", "<leader>ph", function() MiniPick.builtin.help() end, { desc = "mini pick help" })
 vim.keymap.set("n", "<leader>pk", function() MiniExtra.pickers.keymaps() end, { desc = 'mini pick keymaps' })

@@ -6,14 +6,26 @@ vim.keymap.set("n", "df", vim.diagnostic.open_float, { desc = "show line diagnos
 
 vim.diagnostic.config({ virtual_text = true })
 
-vim.lsp.config("lua_ls", {
-    settings = {
-        Lua = {
-            diagnostics = { globals = { "vim" } },
+local configurations = {
+    ["lua_ls"] = {
+        settings = {
+            Lua = {
+                diagnostics = { globals = { "vim" } },
+            },
         },
     },
-})
+    ["clangd"] = {
+        init_options = {
+            fallbackFlags = { "-std=c23" },
+        },
+    },
+}
+
+for server, config in pairs(configurations) do
+   vim.lsp.config(server, config)
+end
 
 vim.lsp.enable({
     "lua_ls",
+    "clangd",
 })

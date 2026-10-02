@@ -1,7 +1,10 @@
 local treesitter = require("nvim-treesitter")
 
 local ensure_installed = {
-    "go", "bash"
+    "go",
+    "bash",
+    "cpp",
+    "c",
 }
 
 treesitter.install(ensure_installed)

@@ -38,11 +38,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- tab stuff
-vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")   --open new tab
-vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>") --close current tab
-vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>")     --go to next
-vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>")     --go to pre
-vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>") --open current tab in new tab
+-- vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")   --open new tab
+-- vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>") --close current tab
+-- vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>")     --go to next
+-- vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>")     --go to pre
+-- vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>") --open current tab in new tab
 
 --split stuff 
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
@@ -52,7 +52,7 @@ vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current spli
 
 -- Copy filepath to the clipboard
 vim.keymap.set("n", "<leader>fp", function()
-  local filePath = vim.fn.expand("%:~")   
+  local filePath = vim.fn.expand("%:~")
   vim.fn.setreg("+", filePath) 
   print("File path copied to clipboard: " .. filePath) 
 end, { desc = "Copy file path to clipboard" })
