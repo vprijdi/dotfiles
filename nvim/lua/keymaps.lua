@@ -37,6 +37,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
 })
 
+-- moving between windows with ctrl+ arrow keys
+vim.keymap.set("n", "<C-Left>",  "<C-w>h")
+vim.keymap.set("n", "<C-Down>",  "<C-w>j")
+vim.keymap.set("n", "<C-Up>",    "<C-w>k")
+vim.keymap.set("n", "<C-Right>", "<C-w>l")
 -- tab stuff
 -- vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")   --open new tab
 -- vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>") --close current tab
