@@ -6,6 +6,7 @@ require("pack")
 require("mini")
 require("treesitter")
 require("lsp")
+require("gitstuff")
 
 -- colorscheme stuff
 vim.cmd("colorscheme base2tone_suburb_dark")
